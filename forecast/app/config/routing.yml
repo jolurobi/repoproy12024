@@ -27,4 +27,27 @@ get_temp:
     defaults: {_controller:AppBundle:Temperature:get}
     requirements: 
         id: \d+
+check_temp:
+    path: /temperature/check
+    defaults: {_controller:AppBundle:Temperature:check}
+getall_temp:
+    path: /temperature/getall
+    defaults: {_controller:AppBundle:Temperature:getAll}
+location_index:
+    path: /location/index
+    defaults: {_controller:AppBundle:Location:index}
+respuesta_json:   
+    path: /location/json
+    defaults: {_controller:AppBundle:Location:indexJson}
+standalone:
+    path: "/standalone"
+    defaults:
+        _controller: FrameworkBundle:Template:template
+        template: standalone/index.html.twig
+        maxAge: 86400
+        sharedAge: 86400
+forward_index:
+    path: /forward
+    defaults: {_controller:AppBundle:Forward:index}
+    
 
